@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scalex1.0">
+    <title>Output</title>
+
+    <link href="https://cdn.jsdeLivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.
+    css" rel="stylesheet"
+    integrity="sha384-GLhLTQ8iRABdZL1603oVMWSktQOp6D7In1213/3r56G11kw/7e6j6q0"
+    crossorigin="anonymous"
+    </head>
+
+    <body>
+        <div class "container mt=5">
+           <h4>Input Order Pengiriman Internasional</h4>
+
+           <div class="col-6">
+            <table class="table table haver table-striped">
+                <tbody>
+                 <tr>
+                    <th scope="row">Nama Lengkap</th>
+                    <td id="output-Nama Lengkap"></td>
+                 </tr>
+                 <tr>
+                    <th scope="row">Nomor Kontak</th>
+                 <td> id="output-Nomor Kontak"></td>
+                 </tr>
+                 <tr>
+                    <th scope="row">Asal Negara Pengirim</th>
+                    <td id="output-Asal Negara Pengirim"></td>
+                 </tr>
+                 <tr>
+                    <th scope="row">Nama Lengkap</th>
+                    <td id="output-Nama Lengkap"></td>
+                 </tr>
+                 <tr>
+                    <th scope="row">Nomor Kontak</th>
+                    <td id="out-put-Nomor Kontak"</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tujuan Negara Penerima</th>
+                        <td id="out-put-Tujuan Negara Penerima"</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nomor Kontak</th>
+                            <td id="out-put-Nomor Kontak"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nama Barang</th>
+                                <td id="out-put-Nama Barang"</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Berat Barang</th>
+                                    <td id="output-Berat Barang"></td>
+                                </tr>
+                    <tr>
+                        <th scope="row">PPN 11%</th>
+                        <td id="output-ppn"></td>
+                    </tr>
+                
+                </tbody>
+             </table>
+           </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrapd@5.3.
+        0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MLQ1ZAGC
+          *nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"></script>
+          <script>
+            const params= new proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) = searchParams.get(prop),
+            })
+           document.getElementById("output-Nama-Lengkap").innerHTML =
+           params["Nama Lengkap"]
+           document.getElementById("output-Nomor-Kontak").innerHTML =
+           params["Nama Kontak"]
+           document.getElementById("output-Asal-Negara-Pengirim").innerHTML =
+           params["Asal Negara Pengirim"]
+           document.getElementById("output-Nama-Lengkap").innerHTML =
+           params["Nama Lengkap"]
+           document.getElementById("output-Nomor-Kontak").innerHTML =
+           params["Nomor Kontak"]
+           document.getElementById("output-Tujuan-Negara-Penerima").innerHTML =
+           params["Tujuan Negara Penerima"]
+           document.getElementById("output-Nama-Barang").innerHTML =
+           params["Nama Barang"]
+           document.getElementById("output-Berat-Barang").innerHTML =
+           params["qty"]
+
+        
+           const chosenTambahan = []
+           if (params["tambahan1"]) chosenTambahan.push(tambahan[0])
+           if (params["tambahan2"]) chosenTambahan.push(tambahan[1])
+           if (params["tambahan3"]) chosenTambahan.push(tambahan[2])
+
+           document.getElementById("output-tambahan").innerHTML=chosenTambahan.join(', ')
+
+           let biaya = 0
+
+           if (params["hitung biaya pengiriman negara_asal"] === negara_tujuan*params["qty"]
+           if (params)["biaya pengiriman"]===20000 + (20000 * berat_barang)
+           if (params["biaya pengiriman"] === "reguler") biaya *= 50000 +(20000 * berat_barang)
+           *params["qty"]
+           else if (params["kategori"] === "premium") biaya *=
+           1000000 * params["qty"]
+
+        ppn = 0.11 * biaya_pengiriman
+        total_biaya = biaya_pengiriman + ppn
+        print("Estimasi biaya pengiriman: Rp", biaya_pengiriman)
+        print("PPN 11%: Rp", ppn)
+        print("Total biaya: Rp", total_biaya)
+
+
+           
+
+           biaya *= chosenTambahan.length * 2
+
+           document.getElementById("output-biaya").innerHTML
+           'Rp ${biaya.toLocaleString()}'
+
+           const ppn = biaya * 0.11
+           document.getElementById("output-ppn").innerHTML
+           {pph.toLocaleString()}
+
+           const total = biaya* ppn
+           document.getElementById("output*total").innerHTML
+           'Rp ${total.toLocaleString()}'
+           </script>
+
